@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,12 +32,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ToDo List" id="Wt0-UZ-yLd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7lB-As-1av"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7lB-As-1av">
+                            <connections>
+                                <segue destination="Kkt-nZ-QwZ" kind="show" id="d70-bf-H2m"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdt-b3-UZG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705.79710144927537" y="70.982142857142847"/>
+            <point key="canvasLocation" x="430" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v6V-LQ-aeZ">
@@ -55,6 +60,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uns-cx-u4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-387" y="71"/>
+        </scene>
+        <!--Add To Do View Controller-->
+        <scene sceneID="Ne4-cc-1hh">
+            <objects>
+                <viewController id="Kkt-nZ-QwZ" customClass="AddToDoViewController" customModule="ToDoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJa-GJ-eBT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIw-IL-iPB">
+                                <rect key="frame" x="60" y="148" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAU-S3-9KV">
+                                <rect key="frame" x="120" y="140" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-pR-v5B">
+                                <rect key="frame" x="60" y="234" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mPB-hq-5ft">
+                                <rect key="frame" x="203" y="229" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa7-qA-aDc">
+                                <rect key="frame" x="30" y="330" width="354" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add To Do"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Kkt-nZ-QwZ" eventType="touchUpInside" id="j4S-a1-1vP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VpA-DO-zC4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OAU-S3-9KV" firstAttribute="top" secondItem="VpA-DO-zC4" secondAttribute="top" constant="52" id="JWe-oe-R8L"/>
+                            <constraint firstItem="IIw-IL-iPB" firstAttribute="leading" secondItem="VpA-DO-zC4" secondAttribute="leading" constant="60" id="Lf6-7m-scJ"/>
+                            <constraint firstItem="Fa7-qA-aDc" firstAttribute="top" secondItem="mPB-hq-5ft" secondAttribute="bottom" constant="70" id="SL7-6C-vvK"/>
+                            <constraint firstItem="EXw-pR-v5B" firstAttribute="leading" secondItem="VpA-DO-zC4" secondAttribute="leading" constant="60" id="caS-4z-HQl"/>
+                            <constraint firstItem="Fa7-qA-aDc" firstAttribute="leading" secondItem="VpA-DO-zC4" secondAttribute="leading" constant="30" id="cuF-2W-xCF"/>
+                            <constraint firstItem="OAU-S3-9KV" firstAttribute="leading" secondItem="IIw-IL-iPB" secondAttribute="trailing" constant="22" id="dMz-7T-qOQ"/>
+                            <constraint firstItem="EXw-pR-v5B" firstAttribute="top" secondItem="OAU-S3-9KV" secondAttribute="bottom" constant="60" id="eWr-qC-D8t"/>
+                            <constraint firstItem="mPB-hq-5ft" firstAttribute="leading" secondItem="EXw-pR-v5B" secondAttribute="trailing" constant="60" id="en3-rC-KP8"/>
+                            <constraint firstItem="IIw-IL-iPB" firstAttribute="top" secondItem="VpA-DO-zC4" secondAttribute="top" constant="60" id="jmk-AX-F2a"/>
+                            <constraint firstItem="VpA-DO-zC4" firstAttribute="trailing" secondItem="Fa7-qA-aDc" secondAttribute="trailing" constant="30" id="lJ5-xc-aM4"/>
+                            <constraint firstItem="VpA-DO-zC4" firstAttribute="trailing" secondItem="OAU-S3-9KV" secondAttribute="trailing" constant="40" id="uGI-Er-apD"/>
+                            <constraint firstItem="mPB-hq-5ft" firstAttribute="top" secondItem="OAU-S3-9KV" secondAttribute="bottom" constant="55" id="yNC-N5-2UO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dMA-2e-Oxf"/>
+                    <connections>
+                        <outlet property="importantSwitch" destination="mPB-hq-5ft" id="VUA-tj-Pyp"/>
+                        <outlet property="titleTextField" destination="OAU-S3-9KV" id="63x-FO-coL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fb5-8l-TOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250.7246376811595" y="70.982142857142847"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD06B1982885F70800E40644 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD06B1972885F70800E40644 /* AddToDoViewController.swift */; };
 		BDB824822881ECA200BE0669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB824812881ECA200BE0669 /* AppDelegate.swift */; };
 		BDB824842881ECA200BE0669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB824832881ECA200BE0669 /* SceneDelegate.swift */; };
 		BDB824892881ECA200BE0669 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB824872881ECA200BE0669 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD06B1972885F70800E40644 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		BDB8247E2881ECA200BE0669 /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB824812881ECA200BE0669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB824832881ECA200BE0669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		BDB824752881ECA200BE0669 = {
 			isa = PBXGroup;
 			children = (
+				BD06B1972885F70800E40644 /* AddToDoViewController.swift */,
 				BDB824802881ECA200BE0669 /* ToDoListApp */,
 				BDB8247F2881ECA200BE0669 /* Products */,
 			);
@@ -148,6 +151,7 @@
 				BDB8249B2881F1DB00BE0669 /* ToDo.swift in Sources */,
 				BDB824842881ECA200BE0669 /* SceneDelegate.swift in Sources */,
 				BDB8248C2881ECA200BE0669 /* ToDoListApp.xcdatamodeld in Sources */,
+				BD06B1982885F70800E40644 /* AddToDoViewController.swift in Sources */,
 				BDB824992881F16400BE0669 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
